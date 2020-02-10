@@ -1,0 +1,38 @@
+Endpoints:
+    - Authenticate: Request access token
+    - User
+        - Get
+        - Update
+    - Chats:
+        - Create
+        - Get all with search Params
+        - Get
+        - Update
+        - Delete
+    - Buddies: 
+        - Create
+        - Get all with search Params
+        - Get
+        - Delete
+    - Messages:
+        - Get all with search Params
+        - Get
+        - Update
+        - Create
+        - Delete
+    - Media:
+        - Create
+        - Delete
+    - Stream  //- Investigar Via UDP -//
+        - Create
+        - Modify
+
+
+//TODO: Define Documents Model
+MongoDB - NoSQL
+    Collections:
+        Users:
+        Chats
+        Messages
+        Media
+        Streams
