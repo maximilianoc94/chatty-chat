@@ -1,0 +1,37 @@
+MongoDB - NoSQL
+    Collections:
+        - Users:
+        - Chats
+        - Messages
+        - Media
+        - Streams
+
+    Entities:
+        - User
+            email: String
+            profile_pic: Blob?
+            nickname: String
+            is_online: Boolean 
+            friends: [User]
+            chats_list: [Chat]
+            pinned_chats: [Chat]
+            starred_msgs: [Message]
+        - Chat
+            members: [User]
+            messages_list: [Message]
+            is_group_chat: Boolean
+            group_pic: Blob?
+            group_name: String?
+        - Message
+            user: User
+            data: String | Media
+            timestamp: Int
+            reply: Message?
+            deleted_by: [User]
+        - Media
+            type: String
+            data: Blob
+        - Stream
+            members: [User]
+            muted_users: [User]
+            video_stopped_users: [User]

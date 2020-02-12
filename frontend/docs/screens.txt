@@ -31,11 +31,11 @@ Screens:
             - Contact/Group Header
             - Search Message
             - Send Pictures
-            - Start Videocall - 1to1 //- Investigate how to do Group chatting -//
+            - Start Videocall - 1to1 //- Investigate how to do Group videochatting -//
             - Dropdown
                 - Contact Info
-                - Clear Messages //- Stand by -//
-                - Delete chat //- Stand by -//
+                - Clear Messages
+                - Delete chat
             - Scroll-Paginated List of Messages
             - Message Input
             - Send voice notes //- Investigate how to send audio files -// 
