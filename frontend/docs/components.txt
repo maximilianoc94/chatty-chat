@@ -1,0 +1,40 @@
+Components:
+
+	-List
+		- Chat
+		- Groups
+		- FavoriteMessages
+	-Search
+		-Chats
+		-Buddies
+	-ChatLabel
+	-Button(includes)
+		-NewGroup
+		-Add Buddy
+		-Delete Buddy
+		-Toggle-Onlone/Offline
+		-Log Out
+		-Search
+		-SendPicture
+		-StartVideoCall
+		-SendVoice
+		-MuteAudio
+		-Hangup
+		-StopVideo
+	-Dropdown
+		-DropdownLabel
+	-BuddyLabel
+
+	-Profile
+		-ProfilePic
+		-Nickname
+	-Chat
+		-ContactHeader
+		-ChatFrame
+		-MessageInput
+	-VideoCall
+		-VideoFrame
+        -VideoControls
+		
+		
+	
