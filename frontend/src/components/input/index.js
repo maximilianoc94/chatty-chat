@@ -1,9 +1,8 @@
-import React from "react";
+import React from 'react';
 
-import { base } from "./input.module.scss";
+import { base } from './input.module.scss';
 
-const propTypes = {};
-function Input(props) {
+function Input() {
   return <div className={base}>input component works</div>;
 }
 

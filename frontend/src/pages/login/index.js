@@ -3,7 +3,7 @@ import React from 'react';
 import { base } from './login.module.scss';
 
 const propTypes = {};
-function Login(props) {
+function Login() {
   return <div className={base}>login component works</div>;
 }
 

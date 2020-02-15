@@ -1,15 +1,15 @@
-import React from "react";
+import React from 'react';
 
 import {
   base,
   nameAndText,
   profilePictureContainer,
-  statusText
-} from "./label.module.scss";
+  statusText,
+} from './label.module.scss';
 
-import profilePic from "../../images/profilePic.jpg";
+import profilePic from '../../images/profilePic.jpg';
 
-function Label(props) {
+function Label({ name, status }) {
   return (
     <div className={base}>
       <div className={profilePictureContainer}>
@@ -17,8 +17,8 @@ function Label(props) {
       </div>
 
       <div className={nameAndText}>
-        <div>{props.name}</div>
-        <p className={statusText}>{props.status}</p>
+        <div>{name}</div>
+        <p className={statusText}>{status}</p>
       </div>
     </div>
   );

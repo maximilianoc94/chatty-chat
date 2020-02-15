@@ -2,16 +2,16 @@
   "extends": [
     "react-app",
     "airbnb",
+    "airbnb/hooks",
     "plugin:jsx-a11y/strict",
     "prettier",
     "prettier/react"
   ],
   "plugins": ["jsx-a11y", "prettier"],
   "rules": {
+    "global-require": 0,
+    "import/no-dynamic-require": 0,
     "semi": 1,
-    "import/extension": {
-      "js": "always"
-    },
     "jsx-a11y/label-has-for": 0,
     "getter-return": 2,
     "no-async-promise-executor": 2,
@@ -23,12 +23,14 @@
     "no-dupe-keys": 2,
     "no-duplicate-case": 2,
     "no-prototype-builtins": 2,
+    "no-plusplus": 0,
     "no-obj-calls": 2,
     "no-empty": 2,
     "no-func-assign": 2,
     "no-unreachable": 2,
     "use-isnan": 2,
     "no-alert": 2,
+    "class-methods-use-this": 0,
     "no-empty-function": 2,
     "no-implicit-coercion": 2,
     "no-redeclare": 2,
@@ -56,7 +58,10 @@
     "prettier/prettier": [
       "error",
       {
-        "semi": true
+        "semi": true,
+        "singleQuote": true,
+        "arrowParens": "always",
+        "trailingComma": "all"
       }
     ]
   }

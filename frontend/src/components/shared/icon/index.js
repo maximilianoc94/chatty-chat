@@ -1,13 +1,13 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const propTypes = {
-  icon: PropTypes.string.isRequired
+  icon: PropTypes.string.isRequired,
 };
 
 const iconBtn = {
   padding: 0,
-  background: "transparent"
+  background: 'transparent',
 };
 
 const Icon = React.memo(function Icon({
@@ -22,6 +22,7 @@ const Icon = React.memo(function Icon({
   if (onClick) {
     return (
       <button
+        type="button"
         title={title}
         style={iconBtn}
         onClick={onClick}

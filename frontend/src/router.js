@@ -1,8 +1,8 @@
-import React from "react";
-import { Router } from "@reach/router";
-import Home from "./pages/home";
-import Login from "./pages/login";
-import AuthGuard from "./components/auth-guard";
+import React from 'react';
+import { Router } from '@reach/router';
+import Home from './pages/home';
+import Login from './pages/login';
+import AuthGuard from './components/auth-guard';
 
 function Routing() {
   return (

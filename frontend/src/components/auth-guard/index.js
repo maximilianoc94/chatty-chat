@@ -1,6 +1,6 @@
-import React from "react";
-import { Redirect } from "@reach/router";
-import { Store } from "../../store/index.js";
+import React from 'react';
+import { Redirect } from '@reach/router';
+import { Store } from '../../store';
 
 function AuthGuard({ children }) {
   const store = React.useContext(Store);

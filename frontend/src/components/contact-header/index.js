@@ -1,18 +1,17 @@
-import React from "react";
+import React from 'react';
 
-import { base, headerButtons } from "./contact-header.module.scss";
+import { base, headerButtons } from './contact-header.module.scss';
 
-import Label from "../label";
-import Button from "../button";
-import UserService from "../../services/user";
+import Label from '../label';
+import Button from '../button';
 
 function ContactHeader(props) {
   const startCall = () => {
-    console.log("Calling");
+    console.log('Calling');
   };
 
   const startVideoCall = () => {
-    console.log("VideoCalling");
+    console.log('VideoCalling');
   };
 
   return (
@@ -26,20 +25,20 @@ function ContactHeader(props) {
       />
       <div className={headerButtons}>
         <Button
-          icon={"call"}
-          onClick={event => {
+          icon="call"
+          onClick={(event) => {
             startCall();
           }}
           size="medium"
         />
         <Button
-          icon={"video"}
-          onClick={event => {
+          icon="video"
+          onClick={(event) => {
             startVideoCall();
           }}
           size="medium"
         />
-        <Button icon={"dropMenu"} size="medium" />
+        <Button icon="dropMenu" size="medium" />
       </div>
     </div>
   );
