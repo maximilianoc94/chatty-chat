@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 import {
   base,
   nameAndText,
@@ -7,21 +7,25 @@ import {
   statusText,
 } from './label.module.scss';
 
-import profilePic from '../../images/profilePic.jpg';
-
-function Label({ name, status }) {
+function Label({ name, status, pic }) {
   return (
     <div className={base}>
       <div className={profilePictureContainer}>
-        <img src={profilePic} alt="profile" />
+        <img src={pic} alt="profile" />
       </div>
 
       <div className={nameAndText}>
-        <div>{name}</div>
+        {name}
         <p className={statusText}>{status}</p>
       </div>
     </div>
   );
 }
+
+Label.propTypes = {
+  name: PropTypes.string.isRequired,
+  status: PropTypes.string.isRequired,
+  pic: PropTypes.string.isRequired,
+};
 
 export default Label;

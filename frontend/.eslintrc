@@ -9,6 +9,7 @@
   ],
   "plugins": ["jsx-a11y", "prettier"],
   "rules": {
+    "react/require-default-props": 0,
     "global-require": 0,
     "import/no-dynamic-require": 0,
     "semi": 1,

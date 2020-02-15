@@ -1,39 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import types from './types';
 
-const propTypes = {
-  icon: PropTypes.string.isRequired,
-};
-
-const iconBtn = {
-  padding: 0,
-  background: 'transparent',
-};
-
-const Icon = React.memo(function Icon({
-  icon,
-  onClick,
-  title,
-  disabled,
-  ...props
-}) {
-  const renderIcon = () => require(`./types/${icon}`).default;
-  const SVG = renderIcon();
-  if (onClick) {
-    return (
-      <button
-        type="button"
-        title={title}
-        style={iconBtn}
-        onClick={onClick}
-        disabled={disabled}
-      >
-        <SVG {...props} />
-      </button>
-    );
-  }
-  return <SVG {...props} />;
+const Icon = React.memo(function Icon({ icon, className = '' }) {
+  const iconData = types[icon];
+  return (
+    <svg
+      className={className}
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox={iconData.viewBox}
+    >
+      <path fill="currentColor" d={iconData.d} />
+    </svg>
+  );
 });
 
-Icon.propTypes = propTypes;
+Icon.propTypes = {
+  icon: PropTypes.string.isRequired,
+  className: PropTypes.string,
+};
+
 export default Icon;

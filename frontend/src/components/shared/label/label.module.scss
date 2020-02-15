@@ -14,9 +14,13 @@
 .statusText {
   margin: 0;
   font-size: 0.8em;
+  opacity: 0.6;
+  font-weight: 100;
+  font-style: italic;
 }
 
 .nameAndText {
+  cursor: default;
   margin: 0 0 0 10px;
   font-weight: 600;
 }

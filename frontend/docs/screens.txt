@@ -1,0 +1,47 @@
+Screens:
+    Login
+    Home
+        - Chats/Groups' List
+            - Search Chats
+            - Chat Preview
+            - Dropdown
+                - Pin Chat
+                - Mark as unread/read
+                - Delete Chat
+                - Delete Contact
+        - Buddies's List
+            - Search Buddies
+            - New Group
+            - Add/Delete Buddies
+            - Buddies Preview 
+        - Profile
+            - Profile Pic
+            - Edit Nickname
+            - Toggle Online/Offline Status
+        - Dropdown
+            - New group
+            - Profile
+            - Favorite Messages
+            - Log out
+        - Favorite Messages
+            - UnFav all
+            - List of Messages
+            - Go to message
+        - Chat
+            - Contact/Group Header
+            - Search Message
+            - Send Pictures
+            - Start Videocall - 1to1 //- Investigate how to do Group videochatting -//
+            - Dropdown
+                - Contact Info
+                - Clear Messages
+                - Delete chat
+            - Scroll-Paginated List of Messages
+            - Message Input
+            - Send voice notes //- Investigate how to send audio files -// 
+        - VideoCall
+            - VideoStream Frame
+            - Add Buddies
+            - Mute audio
+            - Hangup
+            - Stop Video

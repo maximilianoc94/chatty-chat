@@ -1,0 +1,29 @@
+Endpoints:
+    - Authenticate: Request access token
+    - User
+        - Get
+        - Update
+       Buddies: 
+        - Create
+        - Get all with search Params
+        - Get
+        - Delete
+    - Chats:
+        - Create
+        - Get all with search Params
+        - Get
+        - Update
+        - Delete
+    
+    - Messages:
+        - Get all with search Params
+        - Get
+        - Update
+        - Create
+        - Delete
+    - Media:
+        - Create
+        - Delete
+    - Stream  //- Investigar Via UDP -//
+        - Create
+        - Modify

@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.scss';
 import Routing from './router';
-import * as serviceWorker from './serviceWorker';
 import StoreContext from './store';
+import './styles/global.scss';
+import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <StoreContext>
