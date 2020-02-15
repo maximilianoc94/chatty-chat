@@ -1,15 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
 
-import { base } from './login.module.scss';
+import { base } from "./login.module.scss";
 
 const propTypes = {};
-function Login(props){
-  return (
-      <div className={base}>
-        login component works
-      </div>
-      );
+function Login(props) {
+  return <div className={base}>login component works</div>;
 }
 
 Login.propTypes = propTypes;

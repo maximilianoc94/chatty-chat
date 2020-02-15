@@ -31,10 +31,18 @@ Components:
 	-Chat
 		-ContactHeader
 		-ChatFrame
+            -Message
 		-MessageInput
 	-VideoCall
 		-VideoFrame
         -VideoControls
+    -Drawer
+        -BuddyInfo
+        -ChatList
+    -Input
+        -Nickname
+        -MessageInput
+        -Search
 		
 		
 	
