@@ -1,0 +1,15 @@
+@import "../../styles//utils//abstract";
+
+.base {
+  border-bottom: 1px solid $textDark;
+  padding: 20px 0px 20px 0;
+  font-size: 1.1em;
+  color: $textLight;
+  display: flex;
+  justify-content: space-between;
+}
+
+.headerButtons {
+  display: flex;
+  align-items: center;
+}

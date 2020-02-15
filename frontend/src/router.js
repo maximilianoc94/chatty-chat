@@ -8,7 +8,7 @@ function Routing() {
   return (
     <Router>
       <AuthGuard path="/">
-        <Home />
+        <Home path="/" />
       </AuthGuard>
       <Login path="/login" />
     </Router>
