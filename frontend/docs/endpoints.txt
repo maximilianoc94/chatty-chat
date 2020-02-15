@@ -3,17 +3,18 @@ Endpoints:
     - User
         - Get
         - Update
+       Buddies: 
+        - Create
+        - Get all with search Params
+        - Get
+        - Delete
     - Chats:
         - Create
         - Get all with search Params
         - Get
         - Update
         - Delete
-    - Buddies: 
-        - Create
-        - Get all with search Params
-        - Get
-        - Delete
+    
     - Messages:
         - Get all with search Params
         - Get

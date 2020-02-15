@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import { base } from "./login.module.scss";
+import { base } from './login.module.scss';
 
 const propTypes = {};
 function Login(props) {

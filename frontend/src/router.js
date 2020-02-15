@@ -1,7 +1,7 @@
-import React from "react";
-import { Router } from "@reach/router";
-import Home from "./pages/home";
-import Login from "./pages/login";
+import React from 'react';
+import { Router } from '@reach/router';
+import Home from './pages/home/index.js';
+import Login from './pages/login/index.js';
 
 function Routing() {
   return (

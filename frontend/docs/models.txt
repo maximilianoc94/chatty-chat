@@ -9,8 +9,8 @@ MongoDB - NoSQL
     Entities:
         - User
             email: String
+            nickname: String?
             profile_pic: Blob?
-            nickname: String
             is_online: Boolean 
             friends: [User]
             chats_list: [Chat]

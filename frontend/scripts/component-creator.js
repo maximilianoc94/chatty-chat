@@ -1,20 +1,20 @@
-const { exec } = require("child_process");
-const fs = require("fs");
-const path = require("path");
+const { exec } = require('child_process');
+const fs = require('fs');
+const path = require('path');
 
 const componentName = process.argv[2];
-const nameSplitted = componentName.split("-");
+const nameSplitted = componentName.split('-');
 for (let i = 0; i < nameSplitted.length; i += 1) {
   nameSplitted[i] =
     nameSplitted[i][0].toUpperCase() + nameSplitted[i].substr(1);
 }
-const capitalCasedName = nameSplitted.join("");
+const capitalCasedName = nameSplitted.join('');
 
 const componentPath = path.join(
   __dirname,
-  "../src",
-  "components",
-  componentName
+  '../src',
+  'components',
+  componentName,
 );
 
 const command = `mkdir ${componentPath} && touch ${componentPath}/index.js && touch ${componentPath}/${componentName}.module.scss`;
@@ -36,13 +36,13 @@ function ${capitalCasedName}(props){
 ${capitalCasedName}.propTypes = propTypes;
 export default ${capitalCasedName};
 `,
-    err => {
+    (err) => {
       if (err) console.error(err);
       else
         console.log(
-          "Created component at src/components/ named ",
-          componentName
+          'Created component at src/components/ named ',
+          componentName,
         );
-    }
+    },
   );
 });
