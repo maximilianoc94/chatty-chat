@@ -1,11 +1,17 @@
-// import socketIO from "./socket.js";
+import socketIO from './socket.js';
+import { Subject } from 'rxjs';
 
-// class UserService {
-//   static login(user) {
-//     socketIO.on("login", data => {
-//       console.log(data);
-//     });
-//   }
-// }
+class UserService {
+  constructor() {
+    this.user = new Subject();
+    socketIO.on('login response', (data) => {
+      this.user.next(data);
+    });
+  }
 
-// export default UserService;
+  login(user) {
+    socketIO.emit('login', user);
+  }
+}
+
+export default new UserService();

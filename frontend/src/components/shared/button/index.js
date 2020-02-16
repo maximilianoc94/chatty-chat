@@ -20,8 +20,8 @@ function Button({ icon, onClick, size = 'medium', color = 'white' }) {
 Button.propTypes = {
   icon: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
-  size: PropTypes.oneOf('medium'),
-  color: PropTypes.oneOf('white'),
+  size: PropTypes.oneOf(['medium']),
+  color: PropTypes.oneOf(['white']),
 };
 
 export default Button;
