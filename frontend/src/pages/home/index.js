@@ -5,7 +5,7 @@ import { base } from './home.module.scss';
 import ContactHeader from '../../components/contact-header';
 import ChatFrame from '../../components/chat-frame';
 
-function Home(props) {
+function Home() {
   return (
     <div className={base}>
       <ContactHeader />

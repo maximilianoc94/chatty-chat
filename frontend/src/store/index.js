@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import rootReducer, { initialState } from './reducers/index.js';
+import rootReducer, { initialState } from './reducers';
 
 export const Store = React.createContext();
 const StoreContext = ({ children }) => {

@@ -1,15 +1,15 @@
-@import "../styles/utils/abstract";
+@import '../styles/utils/abstract';
 
 * {
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.05rem;
 }
 
 body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
 }
 
 h1,
@@ -21,4 +21,13 @@ h6,
 p {
   cursor: default;
   margin: 0;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: none;
+  transition: background-color 0.3s ease-in-out;
 }

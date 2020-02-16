@@ -1,12 +1,12 @@
-import socketIOClient from 'socket.io-client';
-import { useState } from 'react';
+// import socketIOClient from "socket.io-client";
 
-const config = {
-  endpoint: 'http://127.0.0.1:5000/',
-};
-const useSocketIO = () => {
-  const [socket] = useState(socketIOClient(config.endpoint));
-  return socket;
-};
+// const config = {
+//   endpoint: "http://127.0.0.1:5000/"
+// };
 
-export default useSocketIO();
+// function useSocketIO() {
+//   const [socket] = socketIOClient(config.endpoint);
+//   return socket;
+// }
+
+// export default socketIOClient(config.endpoint);

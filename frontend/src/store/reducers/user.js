@@ -1,4 +1,4 @@
-import * as types from '../types.js';
+import * as types from '../types';
 
 export default function userReducer(state = false, action) {
   switch (action.type) {

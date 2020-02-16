@@ -9,7 +9,9 @@
   ],
   "plugins": ["jsx-a11y", "prettier"],
   "rules": {
-    "import/extensions": [1, { "js": "always" }],
+    "react/require-default-props": 0,
+    "global-require": 0,
+    "import/no-dynamic-require": 0,
     "semi": 1,
     "jsx-a11y/label-has-for": 0,
     "getter-return": 2,
@@ -59,7 +61,8 @@
       {
         "semi": true,
         "singleQuote": true,
-        "arrowParens": "always"
+        "arrowParens": "always",
+        "trailingComma": "all"
       }
     ]
   }

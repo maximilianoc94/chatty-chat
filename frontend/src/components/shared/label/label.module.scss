@@ -1,0 +1,32 @@
+.base {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.profilePictureContainer {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.statusText {
+  margin: 0;
+  font-size: 0.8em;
+  opacity: 0.6;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.nameAndText {
+  cursor: default;
+  margin: 0 0 0 10px;
+  font-weight: 600;
+}
+
+img {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+}

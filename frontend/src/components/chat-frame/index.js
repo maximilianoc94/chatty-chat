@@ -1,10 +1,8 @@
-import React from "react";
+import React from 'react';
+import { base } from './chat-frame.module.scss';
 
-import { base } from "./chat-frame.module.scss";
-
-const propTypes = {};
-function ChatFrame(props) {
-  return <div className={base}></div>;
+function ChatFrame() {
+  return <div className={base} />;
 }
 
 export default ChatFrame;

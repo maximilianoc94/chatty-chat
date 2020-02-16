@@ -1,12 +1,15 @@
 import React from 'react';
-import { render } from 'react-dom';
-import './index.scss';
-import Routing from './router.js';
-import StoreContext from './store/index.js';
+import ReactDOM from 'react-dom';
+import Routing from './router';
+import StoreContext from './store';
+import './styles/global.scss';
+import * as serviceWorker from './serviceWorker';
 
-render(
+ReactDOM.render(
   <StoreContext>
     <Routing />
   </StoreContext>,
   document.getElementById('root'),
 );
+
+serviceWorker.unregister();

@@ -1,4 +1,4 @@
-import userReducer from './user.js';
+import userReducer from './user';
 
 export const initialState = { user: {} };
 
