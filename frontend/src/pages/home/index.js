@@ -1,15 +1,19 @@
 import React from 'react';
 
-import { base } from './home.module.scss';
+import { base, middlePanel } from './home.module.scss';
 
 import ContactHeader from '../../components/contact-header';
-import ChatFrame from '../../components/chat-frame';
+import ChatList from '../../components/chat-list';
+import ChatInputBox from '../../components/chat-input-box';
 
 function Home() {
   return (
     <div className={base}>
-      <ContactHeader />
-      <ChatFrame />
+      <div className={middlePanel}>
+        <ContactHeader />
+        <ChatList />
+        <ChatInputBox />
+      </div>
     </div>
   );
 }

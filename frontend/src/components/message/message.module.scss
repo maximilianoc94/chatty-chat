@@ -1,0 +1,39 @@
+@import '../../styles//utils//abstract';
+
+.messageRow {
+  display: grid;
+  grid-template-columns: 70%;
+  margin: 10px 0;
+}
+
+.dataText {
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  margin: 10px 0;
+  color: $textLight;
+}
+
+.sent .dataText {
+  background-color: $chatGreen;
+}
+
+.sent {
+  justify-content: end;
+  justify-items: end;
+}
+
+.recieved .dataText {
+  background-color: $secondaryGray;
+}
+.recieved {
+  justify-content: start;
+  justify-items: start;
+}
+
+.timeStmp {
+  color: $textLight;
+  font-size: 0.6rem;
+  font-weight: 500;
+  font-style: italic;
+}

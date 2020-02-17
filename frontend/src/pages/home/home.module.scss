@@ -1,8 +1,12 @@
-@import "../../styles//utils//abstract";
+@import '../../styles//utils//abstract';
 
 .base {
   background-color: $primaryGray;
   width: 100%;
-  height: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+.middlePanel {
   margin: 0;
 }

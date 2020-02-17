@@ -19,6 +19,17 @@
   }
 }
 
+.grayBack {
+  background-color: $primaryGray;
+  background-color: #5a5c66;
+  border-radius: 50%;
+  width: 35px;
+
+  &:hover {
+    background-color: $buttonGreen;
+  }
+}
+
 .white {
   color: white;
 }

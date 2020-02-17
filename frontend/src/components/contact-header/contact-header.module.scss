@@ -1,6 +1,7 @@
-@import "../../styles//utils//abstract";
+@import '../../styles//utils//abstract';
 
 .base {
+  margin: 0 30px;
   border-bottom: 1px solid $textDark;
   padding: 20px 0px 20px 0;
   font-size: 1.1em;

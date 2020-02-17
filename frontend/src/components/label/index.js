@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 
 import {
   base,
   nameAndText,
   profilePictureContainer,
-  statusText
-} from "./label.module.scss";
+  statusText,
+} from './label.module.scss';
 
-import profilePic from "../../images/profilePic.jpg";
+import profilePic from '../../images/profilePic.jpg';
 
 function Label(props) {
   return (
