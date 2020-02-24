@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import rootReducer, { initialState } from './reducers';
-import * as types from './types';
-export { types };
 
 export const Store = React.createContext();
 const StoreContext = ({ children }) => {
