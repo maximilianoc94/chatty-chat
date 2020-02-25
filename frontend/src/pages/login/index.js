@@ -8,10 +8,14 @@ import GoogleBtn from '../../components/shared/google-btn';
 import ParticlesConfig from './particlesjs-config';
 import { Store } from '../../store';
 import { login } from '../../store/actions';
+import shiwibMain from '../../images/shiwib_main.png';
+import UserService from '../../services/user';
 import {
   base,
   halfBlock,
+  logoWrapper,
   loginWrapper,
+  loginTitle,
   particlesWrapper,
   displayError,
   activeError,
@@ -19,7 +23,7 @@ import {
 
 const propTypes = {};
 function Login() {
-  const [store, dispatch] = useContext(Store);
+  const [, dispatch] = useContext(Store);
   const [loading, setLoading] = useState(false);
   const [showError, setShowError] = useState([false, '']);
 
@@ -37,6 +41,7 @@ function Login() {
     return () => {
       unsubscribe();
     };
+    // eslint-disable-next-line
   }, []);
 
   /** Google Login Click Handler */
@@ -61,9 +66,9 @@ function Login() {
   const onSuccess = async (currentUser) => {
     try {
       const tokenId = await currentUser.getIdToken(true);
-      // const userResponse = await LoginService.loginWithAccessToken(tokenId);
-      // dispatch(login(userResponse));
-      // navigate('/');
+      const userResponse = await UserService.loginWithAccessToken(tokenId);
+      dispatch(login(userResponse));
+      navigate('/');
     } catch (error) {
       setShowError([true, error.message]);
     }
@@ -75,11 +80,19 @@ function Login() {
       <div className={particlesWrapper}>
         <Particles width="100vw" height="100vh" params={ParticlesConfig} />
       </div>
+      <div className={logoWrapper}>
+        <img src={shiwibMain} alt="shiwib logo" />
+      </div>
       <div className={loginWrapper}>
-        <p className={[displayError, hasError && activeError].join(' ')}>
-          {errorMessage}
-        </p>
-        <GoogleBtn onLogin={HandleGoogleLogin} />
+        <h4 className={loginTitle}>{"Start doodling your friends' face"}</h4>
+        {!loading && (
+          <>
+            <GoogleBtn onLogin={HandleGoogleLogin} />
+            <p className={[displayError, hasError && activeError].join(' ')}>
+              {errorMessage}
+            </p>
+          </>
+        )}
       </div>
       <div className={halfBlock} />
     </div>
