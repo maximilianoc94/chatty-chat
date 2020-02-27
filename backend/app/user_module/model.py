@@ -1,4 +1,4 @@
-class UserDTO:
+class User:
     def __init__(self, email, nickname=None, profile_pic=None):
         self.email = email
         self.nickname = nickname if not None else email
@@ -8,3 +8,6 @@ class UserDTO:
         self.chats_list = set()
         self.pinned_chats = set()
         self.starred_msgs = set()
+
+    def __repr__(self):
+        return f'<User {self.name}>'

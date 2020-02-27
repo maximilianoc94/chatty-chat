@@ -1,15 +1,12 @@
 import socketIO from './socket.js';
 import Axios from 'axios';
+import { BASE_URL, PORT } from './config';
 // import { Subject } from 'rxjs';
 
-Axios.defaults.headers.common = {
-  ...Axios.defaults.headers.common,
-  'Content-Type': 'application/json',
-  'Access-Control-Allow-Origin': '*',
-};
+const url = `${BASE_URL}${PORT}/user`;
 
 const endpoints = {
-  loginWithAccessToken: () => `http://127.0.0.1:5000/authenticate`,
+  loginWithAccessToken: () => `${url}/authenticate/`,
 };
 
 class UserService {
