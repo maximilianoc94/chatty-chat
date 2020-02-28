@@ -9,6 +9,11 @@
   height: 75px;
   border-radius: 50%;
   overflow: hidden;
+  img {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+  }
 }
 
 .statusText {
@@ -23,10 +28,4 @@
   cursor: default;
   margin: 0 0 0 10px;
   font-weight: 600;
-}
-
-img {
-  width: 75px;
-  height: 75px;
-  object-fit: cover;
 }
