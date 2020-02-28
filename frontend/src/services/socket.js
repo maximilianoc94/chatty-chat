@@ -1,20 +1,21 @@
 import socketIOClient from 'socket.io-client';
 
-const config = {
-  endpoint: 'http://127.0.0.1:5000/',
-};
-
 const SocketIo = (() => {
   let instance;
-  function createInstance() {
-    const socket = socketIOClient(config.endpoint);
+  function createInstance(token) {
+    const socket = socketIOClient({
+      endpoint: 'http://127.0.0.1:5000/',
+      extraHeaders: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
     return socket;
   }
 
   return {
-    init() {
+    init(token) {
       if (!instance) {
-        instance = createInstance();
+        instance = createInstance(token);
       } else {
         throw new Error('Duplicate instance for SocketIO');
       }

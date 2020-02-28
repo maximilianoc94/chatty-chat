@@ -12,13 +12,12 @@ def authenticate_user():
         data = request.get_json(silent=True)
         token = data.get('token')
         decoded_token = auth.verify_id_token(token)
-        # TODO: check if new user and add it to db
-        # db.user.read(decoded_token['email'])
-        return {
-            "email": decoded_token['email'],
-            "name": decoded_token['name'],
-            "picture": decoded_token['picture']
-        }
+        user_response = db.user.read(decoded_token['email'])
+        if user_response is None:
+            new_user = User(decoded_token['email'], decoded_token['name'], decoded_token['picture'])
+            user_response = db.user.create(new_user)
+            return user_response
+        return user_response
 
 
 @socketio.on('example')

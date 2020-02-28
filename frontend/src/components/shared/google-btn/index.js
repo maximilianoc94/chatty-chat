@@ -5,7 +5,8 @@ import { googleLoginBtn } from './google-btn.module.scss';
 function GoogleBtn({ onLogin }) {
   return (
     <button
-      title={'Log in with Google'}
+      type="button"
+      title="Log in with Google"
       className={googleLoginBtn}
       onClick={onLogin}
     >
@@ -32,7 +33,7 @@ function GoogleBtn({ onLogin }) {
           </g>
         </svg>
       </div>
-      {'Sign in with Google'}
+      Sign in with Google
     </button>
   );
 }

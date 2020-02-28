@@ -1,12 +1,12 @@
 from flask import Blueprint, request
 from app import db, socketio
-from app.chat_module.model import Chat
+from app.media_module.model import Media
 
 
-chat_module = Blueprint('chat', __name__, url_prefix='/chat')
+media_module = Blueprint('media', __name__, url_prefix='/media')
 
 
-@chat_module.route('/example/', methods=['POST'])
+@media_module.route('/example/', methods=['POST'])
 def example_endpoint():
     pass
 

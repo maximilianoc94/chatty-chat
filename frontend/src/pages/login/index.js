@@ -34,7 +34,6 @@ function Login() {
         onSuccess(currentUser);
       } else {
         setLoading(false);
-        setShowError([true, 'Failed to authenticate']);
       }
     });
 
@@ -43,6 +42,17 @@ function Login() {
     };
     // eslint-disable-next-line
   }, []);
+
+  const onSuccess = async (currentUser) => {
+    try {
+      const tokenId = await currentUser.getIdToken(true);
+      const userResponse = await UserService.loginWithAccessToken(tokenId);
+      dispatch(login(userResponse));
+      navigate('/');
+    } catch (error) {
+      setShowError([true, 'Failed to authenticate. Check your ']);
+    }
+  };
 
   /** Google Login Click Handler */
   function HandleGoogleLogin() {
@@ -62,17 +72,6 @@ function Login() {
       })
       .catch((error) => setShowError([true, error.message]));
   }
-
-  const onSuccess = async (currentUser) => {
-    try {
-      const tokenId = await currentUser.getIdToken(true);
-      const userResponse = await UserService.loginWithAccessToken(tokenId);
-      dispatch(login(userResponse));
-      navigate('/');
-    } catch (error) {
-      setShowError([true, error.message]);
-    }
-  };
 
   const [hasError, errorMessage] = showError;
   return (
